@@ -1,9 +1,27 @@
-.card-header{
+.card-header {
     text-align: center;
+    background-color: rgb(204, 242, 255);
 }
-.card{
+
+.card {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-  }
+  
+    
+}
+.wrapper-en{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+body {
+    
+    background: url("/assets/images.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
