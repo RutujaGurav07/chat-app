@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="card" style="width: 25rem;">
+    <div class="card-header">
+        <h1>Welcome Back</h1>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for='userNameId'>User name</label>
+                    <div class="col">
+                        <input class="form-control" id="userNameId" type="text" placeholder="username (required)"
+                            formControlName="userName"
+                            [ngClass]="{'is-invalid': submitted && loginForm.get('userName').errors}" />
+                        <span class="invalid-feedback">
+                            <span *ngIf=" submitted && loginForm.get('userName').errors?.required">
+                                Please enter your username name.
+                            </span>
+                            <span *ngIf=" submitted && loginForm.get('userName').errors?.minlength">
+                                The user name must be longer than 3 characters.
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for='PasswordId'>Password</label>
+                    <div class="col">
+                        <input class="form-control" id="PasswordId" type="password" placeholder="password (required)"
+                            formControlName="password"
+                            [ngClass]="{'is-invalid': submitted && loginForm.get('password').errors}" />
+                        <span class="invalid-feedback">
+                            <span *ngIf=" submitted && loginForm.get('password').errors?.required">
+                                Please enter your password
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="btn-toolbar ">
+                    <button class="btn btn-primary mr-1">Register</button>
+                   <button class="btn btn-secondary" > Cancel </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
