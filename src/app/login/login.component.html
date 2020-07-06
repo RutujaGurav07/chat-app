@@ -6,11 +6,11 @@
         </div>
         <div class="card-body">
             <div class="container">
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <form [formGroup]="loginForm" (ngSubmit)="login(userId.value)">
                     <div class="form-group">
                         <label for='userNameId'>User Name</label>
                         <div class="col">
-                            <input class="form-control" id="userNameId" type="text" placeholder="Username (required)"
+                            <input class="form-control" id="userNameId" type="text" placeholder="Username (required)" #userId
                                 formControlName="userName"
                                 [ngClass]="{'is-invalid': submitted && loginForm.get('userName').errors}" />
                             <span class="invalid-feedback">
