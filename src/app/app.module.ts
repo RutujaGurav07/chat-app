@@ -9,12 +9,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ChatComponent } from './chat/chat.component';
+import { ContactsListComponent } from './chat/contacts-list/contacts-list.component';
+import { MessagesViewComponent } from './chat/messages-view/messages-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ChatComponent
+    ChatComponent,
+    ContactsListComponent,
+    MessagesViewComponent
   ],
   imports: [
     BrowserModule,
