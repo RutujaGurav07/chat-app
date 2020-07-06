@@ -1,2 +1,19 @@
-<p>chat works!</p>
 <!-- https://www.cometchat.com/tutorials/angular-chat-one-on-one -->
+<div class="chat-toolbar">
+    <div class="logo">
+        <span>chat</span>
+    </div>
+    <!-- <div *ngIf="authService.currentUser" class="user-profile">
+        <span>
+            Welcome, <b> {{ authService.currentUser.name }}</b>
+        </span>
+        <img [src]="authService.currentUser.avatar" />
+    </div> -->
+
+</div>
+<div class="chat-page">
+    <div class="chat-box">
+        <app-contacts-list></app-contacts-list>
+        <app-messages-view></app-messages-view>
+    </div>
+</div>
